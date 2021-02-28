@@ -1,0 +1,62 @@
+@import './variables';
+
+body {
+    font-family:'Lato',sans-serif;
+    -webkit-font-smoothing : antialiased;
+    color: $dark;
+    background-color: #ece7e7;
+}
+.container{
+    max-width: 384vh;
+    padding: 11px 45px;
+    background-color: #ece7e7;
+}
+
+nav li:last-child a{
+    background:$primary;
+    &:hover{
+        background:$primary-hover;
+    }
+}
+nav li a{
+    transition:$smooth;
+    &:hover{
+        color: $primary;
+    }
+}
+section.hero img{
+    height: 707px;
+    width: 100%;
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+}
+#main-h1{
+    color: white;
+}
+h6{
+    padding-right: 175px;
+    color: white;
+    font-weight: bold;
+}
+section.hero{
+    position: relative;
+    text-align: center;
+}
+.left{
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.Add-to-cart{
+    outline: none;
+    border: 2px solid $primary;
+    color: $primary;
+    transition: $smooth;
+    &:hover{
+        background: $primary;
+        border-color: $pure;
+        color: $pure;
+    }
+}
