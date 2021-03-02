@@ -4,7 +4,7 @@ body {
     font-family:'Lato',sans-serif;
     -webkit-font-smoothing : antialiased;
     color: $dark;
-    background-color: #ece7e7;
+    background-color: white;
 }
 .container{
     max-width: 384vh;
@@ -34,8 +34,8 @@ section.hero img{
     color: white;
 }
 h6{
-    padding-right: 175px;
-    color: white;
+    padding-right: 145px;
+    color: orangered;
     font-weight: bold;
 }
 section.hero{
@@ -44,7 +44,7 @@ section.hero{
 }
 .left{
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 25%;
   transform: translate(-50%, -50%);
 }
@@ -58,5 +58,38 @@ section.hero{
         background: $primary;
         border-color: $pure;
         color: $pure;
+    }
+}
+
+.btn-primary{
+    background: $primary;
+    margin-left: -195px;
+    transition: $smooth;
+    &:hover{
+        background: $primary-hover;
+    }
+}
+.container-cart{
+    background-color: white;
+}
+.btn-primary-2{
+    background: $primary;
+    // margin-left: -195px;
+    transition: $smooth; 
+    &:hover{
+        background: $primary-hover;
+    }
+}
+.amount{
+    color: $primary;
+}
+section.login{
+    min-height: calc(100vh - 100px);
+    background: $secondary;
+    a{
+        color: $primary;
+        &:hover{
+            color: $primary-hover;
+        }
     }
 }

@@ -2,7 +2,7 @@ body {
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #232323;
-  background-color: #ece7e7;
+  background-color: white;
 }
 
 .container {
@@ -36,8 +36,8 @@ section.hero img {
 }
 
 h6 {
-  padding-right: 175px;
-  color: white;
+  padding-right: 145px;
+  color: orangered;
   font-weight: bold;
 }
 
@@ -48,7 +48,7 @@ section.hero {
 
 .left {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 25%;
   transform: translate(-50%, -50%);
 }
@@ -63,4 +63,40 @@ section.hero {
   background: #FE5F1E;
   border-color: #fff;
   color: #fff;
+}
+
+.btn-primary {
+  background: #FE5F1E;
+  margin-left: -195px;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background: #b23301;
+}
+
+.container-cart {
+  background-color: white;
+}
+
+.btn-primary-2 {
+  background: #FE5F1E;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary-2:hover {
+  background: #b23301;
+}
+
+.amount {
+  color: #FE5F1E;
+}
+
+section.login {
+  min-height: calc(100vh - 100px);
+  background: #F8F8F8;
+}
+section.login a {
+  color: #FE5F1E;
+}
+section.login a:hover {
+  color: #b23301;
 }
