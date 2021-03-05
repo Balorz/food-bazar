@@ -5,115 +5,26 @@
         <h1 id = "main-h1" class="text-6xl font-bold">Don't Wait !</h1>
         <button class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-primary">Order Now</button>
     </div>
- 
+    <!-- grid grid-cols-4 ml-20 -->
 </section>
 <section class="menu container mx-auto py-8">
     <h1 class="text-3xl font-bold mb-8 flex items-center justify-center">Our Menu</h1>
     <div class="grid grid-cols-4 ml-20">
-        <div class="w-64">
-            <img class="h-66 mb-4 mx-auto" src="/img/menu1.png" alt="menu">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg py-1">Panner Tikka</h2>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">₹250</span>
-                    <button class="Add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
+        <% food.forEach(function(food) { %>
+            <div class="w-52 ">
+                <img class="h-66 mb-4 mx-auto" src="/img/menu/<%= food.image %>" alt="menu">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg py-1"><%= food.name %></h2>
+                    <div class="flex items-center justify-around mt-6">
+                        <span class="font-bold text-lg">₹<%= food.price %></span>
+                        <button data-food="<%= JSON.stringify(food) %>" class="Add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
+                            <span>+</span>
+                            <span class="ml-4">Add</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="w-64">
-            <img class="h-60 mb-4 mx-auto" src="/img/menu1.png" alt="menu">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg py-1">Panner Tikka</h2>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">₹250</span>
-                    <button class="Add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="w-64">
-            <img class="h-60 mb-4 mx-auto" src="/img/menu1.png" alt="menu">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg py-1">Panner Tikka</h2>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">₹250</span>
-                    <button class="Add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="w-64">
-            <img class="h-60 mb-4 mx-auto" src="/img/menu1.png" alt="menu">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg py-1">Panner Tikka</h2>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">₹250</span>
-                    <button class="Add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="w-64">
-            <img class="h-60 mb-4 mx-auto" src="/img/menu1.png" alt="menu">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg py-1">Panner Tikka</h2>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">₹250</span>
-                    <button class="Add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="w-64">
-            <img class="h-60 mb-4 mx-auto" src="/img/menu1.png" alt="menu">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg py-1">Panner Tikka</h2>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">₹250</span>
-                    <button class="Add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="w-64">
-            <img class="h-60 mb-4 mx-auto" src="/img/menu1.png" alt="menu">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg py-1">Panner Tikka</h2>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">₹250</span>
-                    <button class="Add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="w-64">
-            <img class="h-60 mb-4 mx-auto" src="/img/menu1.png" alt="menu">
-            <div class="text-center">
-                <h2 class="mb-4 text-lg py-1">Panner Tikka</h2>
-                <div class="flex items-center justify-around mt-6">
-                    <span class="font-bold text-lg">₹250</span>
-                    <button class="Add-to-cart py-1 px-6 rounded-full flex items-center font-bold ">
-                        <span>+</span>
-                        <span class="ml-4">Add</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+       <% })%>
     </div>
 </section>
 <!-- <section class="hero py-16 flex">
