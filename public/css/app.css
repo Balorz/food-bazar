@@ -4,6 +4,7 @@ body {
   -webkit-font-smoothing: antialiased;
   color: #232323;
   background-color: white;
+  scroll-behavior: smooth;
 }
 
 .container {

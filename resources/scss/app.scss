@@ -5,6 +5,7 @@ body {
     -webkit-font-smoothing : antialiased;
     color: $dark;
     background-color: white;
+    scroll-behavior: smooth;
 }
 .container{
     max-width: 384vh;

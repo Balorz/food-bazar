@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
     "connect-mongo": "^4.2.2",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
@@ -20,6 +21,8 @@
     "express-session": "^1.17.1",
     "mongoose": "^5.11.18",
     "notyf": "^3.9.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "webpack-livereload-plugin": "1"
   },
   "devDependencies": {
