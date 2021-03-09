@@ -16,7 +16,7 @@
 <body>
     <nav class="container mx-auto flex items-center justify-between py-4">
         <div class="flex items-center">
-            <img src="/img/logo.png" alt="logo">
+            <a href="/"><img src="/img/logo.png" alt="logo"></a>
             <ul class="flex items-center font-bold"><li>FOOD BAZAR</li></ul>
         </div>
         <div>
@@ -24,7 +24,7 @@
                 <li class="ml-10"><a href="/">Home</a></li>
                 <li class="ml-10"><a href="#menupage">Menu</a></li>
                 <% if(user) { %>
-                    <li class="ml-10"><a href="#">My Orders</a></li>
+                    <li class="ml-10"><a href="customers/orders">My Orders</a></li>
                     <li class="ml-10 text-small">Hello,<%= user.name %></li>
                     <li class="ml-10">
                         <form id="logout" action="/logout" method="POST"><a href="#" onclick="document.getElementById('logout').submit()">Logout</a></form>
@@ -41,6 +41,8 @@
     </nav>
     <%- body %>
     <script src="/js/app.js"></script>
+    <script src='https://kit.fontawesome.com/e784b75917.js' crossorigin='anonymous'></script>
+
 </body>
 
 </html>

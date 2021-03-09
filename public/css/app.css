@@ -13,6 +13,12 @@ body {
   background-color: #ece7e7;
 }
 
+.order-container {
+  max-width: 384vh;
+  padding: 57px 125px;
+  background-color: white;
+}
+
 nav li:last-child a {
   background: #FE5F1E;
 }
@@ -110,4 +116,21 @@ section.login a {
 }
 section.login a:hover {
   color: #b23301;
+}
+
+.eye {
+  margin-top: 10px;
+  padding-left: 230px;
+  position: absolute;
+}
+
+.eye2 {
+  display: block;
+  margin-top: 10px;
+  padding-left: 230px;
+  position: absolute;
+}
+
+a.link {
+  color: #FE5F1E;
 }

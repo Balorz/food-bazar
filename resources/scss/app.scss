@@ -12,6 +12,11 @@ body {
     padding: 11px 45px;
     background-color: #ece7e7;
 }
+.order-container{
+    max-width: 384vh;
+    padding: 57px 125px;
+    background-color: white;
+}
 
 nav li:last-child a{
     background:$primary;
@@ -102,4 +107,20 @@ section.login{
             color: $primary-hover;
         }
     }
+}
+.eye{ 
+    margin-top: 10px;
+    padding-left: 230px;
+    position: absolute; 
+}
+.eye2{
+    display: block;
+    margin-top: 10px; 
+    padding-left: 230px;    
+    position: absolute;
+}
+
+//orders
+a.link{
+    color: $primary;
 }

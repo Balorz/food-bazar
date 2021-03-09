@@ -1,37 +1,49 @@
- import axios from 'axios'
- import { Notyf } from 'notyf';
+import axios from 'axios'
+import { Notyf } from 'notyf';
+import { initAdmin } from './admin'
 let addToCart = document.querySelectorAll('.Add-to-cart');
 let cartCounter = document.querySelector('#cartCounter');
 function updateCart(food) {
-    axios.post('/update-cart',food).then(res =>{
-        cartCounter.innerText = res.data.totalQty 
+    axios.post('/update-cart', food).then(res => {
+        cartCounter.innerText = res.data.totalQty
         const notyf = new Notyf({
-            duration : 800,
-            position : {
-                x : 'right',
-                y : 'top'
+            duration: 800,
+            position: {
+                x: 'right',
+                y: 'top'
             },
-            ripple : false
+            ripple: false
         });
         notyf.success('Item added to cart');
-    }).catch(err =>{
+    }).catch(err => {
         const notyf = new Notyf({
-            duration : 0,
-            dismissible : true,
-            position : {
-                x : 'right',
-                y : 'top'
+            duration: 0,
+            dismissible: true,
+            position: {
+                x: 'right',
+                y: 'top'
             },
-            ripple : false
+            ripple: false
         });
         notyf.error('Something went wrong');
     })
 }
 
 
-addToCart.forEach((btn) =>{
-    btn.addEventListener('click',(e) =>{
+addToCart.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
         let food = JSON.parse(btn.dataset.food)
         updateCart(food)
     })
 })
+
+// Remove alert message after x second
+
+const alertMsg = document.querySelector('#success-alert')
+if(alertMsg) {
+    setTimeout(() =>{
+        alertMsg.remove()
+    },1000)
+}
+
+initAdmin()
