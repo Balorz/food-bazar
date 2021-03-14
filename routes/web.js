@@ -2,7 +2,8 @@ const homeController = require("../app/http/controllers/homeController")
 const authController = require("../app/http/controllers/authController")
 const cartController = require("../app/http/controllers/customers/cartController")
 const orderController = require("../app/http/controllers/customers/orderController")
-const AdminOrderController = require("../app/http/controllers/admin/orderController")
+const adminOrderController = require("../app/http/controllers/admin/orderController")
+const statusController = require("../app/http/controllers/admin/statusController")
 //middlewares -> they protected pages to not going to random pages
 const guest = require('../app/http/middleware/guest')
 const auth = require('../app/http/middleware/auth')
@@ -25,9 +26,11 @@ function initRoutes(app) {
     //customer
     app.post('/orders',auth,orderController().store)
     app.get('/customers/orders',auth,orderController().index)
+    app.get('/customer/orders/:id',auth,orderController().show)
 
     //Admin Routes
-    app.get('/admin/orders',admin,AdminOrderController().index)
+    app.get('/admin/orders',admin,adminOrderController().index)
+    app.post('/admin/order/status',admin,statusController().update) 
 }
 
 module.exports = initRoutes;

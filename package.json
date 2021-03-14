@@ -24,6 +24,7 @@
     "notyf": "^3.9.0",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
+    "socket.io": "^4.0.0",
     "webpack-livereload-plugin": "1"
   },
   "devDependencies": {
