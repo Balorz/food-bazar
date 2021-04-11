@@ -8,10 +8,14 @@ body {
   scroll-behavior: smooth;
 }
 
+#menupage {
+  background-color: #f0c6c6;
+}
+
 .container {
   max-width: 384vh;
   padding: 11px 45px;
-  background-color: #ece7e7;
+  background-color: #eff0ec;
 }
 
 .order-container {

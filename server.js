@@ -33,7 +33,6 @@ const mongoStore = MongoDbStore.create({
     mongoUrl: url,
     collectionName: "sessions",
   });
-
 //event emitter
 const eventEmitter = new Emitter()
 app.set('eventEmitter',eventEmitter)
