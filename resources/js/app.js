@@ -2,6 +2,7 @@ import axios from 'axios'
 import moment from 'moment';
 import { Notyf } from 'notyf';
 import { initAdmin } from './admin'
+import { initStripe } from './stripe'
 let addToCart = document.querySelectorAll('.Add-to-cart');
 let cartCounter = document.querySelector('#cartCounter');
 function updateCart(food) {
@@ -77,6 +78,8 @@ function updateStatus(order){
 }
 
 updateStatus(order);
+
+initStripe()
 
 // Socket
 let socket = io()
