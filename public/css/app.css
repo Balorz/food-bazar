@@ -110,7 +110,7 @@ nav li a:hover {
 section.hero img {
   height: 707px;
   width: 100%;
-  filter: blur(1px);
+  filter: blur(1.5px);
 }
 
 #main-h1 {
@@ -356,4 +356,20 @@ section.status {
 
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
+}
+
+#footer {
+  background-color: #3f3c3c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  height: auto;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
 }

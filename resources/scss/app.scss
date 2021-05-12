@@ -88,8 +88,8 @@ nav li a{
 section.hero img{
     height: 707px;
     width: 100%;
-    -webkit-filter: blur(1px);
-    filter: blur(1px);
+    -webkit-filter: blur(1.5px);
+    filter: blur(1.5px);
 }
 #main-h1{
     color: white;
@@ -323,4 +323,20 @@ section.status{
 
   .StripeElement--webkit-autofill {
     background-color: #fefde5 !important;
+  }
+
+  #footer {
+    background-color:#3f3c3c;
+    // background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    height: auto;
+  }
+  .info {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
   }
