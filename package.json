@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "Aryan",
   "scripts": {
-    "serve": "node server.js",
+    "start": "node server.js",
     "dev": "nodemon server.js"
   },
   "license": "MIT",
