@@ -26,13 +26,21 @@
         <div>
             <ul class="flex items-center">
                 <li class="ml-10"><a href="/">Home</a></li>
-                <li class="ml-10"><a href="/menu">Menu</a></li>
                 <% if(user) { %>
-                    <li class="ml-10"><a href="customers/orders">My Orders</a></li>
-                    <li class="ml-10 text-small">Hello,<%= user.name %></li>
-                    <li class="ml-10">
-                        <form id="logout" action="/logout" method="POST"><a href="#" onclick="document.getElementById('logout').submit()">Logout</a></form>
-                    </li>
+                    <% if(user.role != 'admin') { %> 
+                        <li class="ml-10"><a href="/menu">Menu</a></li>
+                        <li class="ml-10"><a href="customers/orders">My Orders</a></li>
+                        <li class="ml-10 text-small">Hello,<%= user.name %></li>
+                        <li class="ml-10">
+                            <form id="logout" action="/logout" method="POST"><a href="#" onclick="document.getElementById('logout').submit()">Logout</a></form>
+                        </li>
+                    <% } else if(user.role === 'admin') { %>
+                        <li class="ml-10"><a href="admin/orders">Orders</a></li>
+                        <li class="ml-10 text-small">Hello,<%= user.name %></li>
+                        <li class="ml-10">
+                            <form id="logout" action="/logout" method="POST"><a href="#" onclick="document.getElementById('logout').submit()">Logout</a></form>
+                        </li>
+                    <% } %>
                 <% } else { %>
                     <li class="ml-10"><a href="/register">Register</a></li>
                     <li class="ml-10"><a href="/login">Login</a></li>
@@ -71,6 +79,12 @@
     </footer>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+        },1500)
+    </script>
 </body>
 
 </html>

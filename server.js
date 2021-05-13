@@ -13,13 +13,22 @@ const passport = require('passport');
 const Emitter = require('events')
 
 //Database connection
-const url = 'mongodb://localhost:27017/FoodBazar';
-mongoose.connect(url,{
+const DB = process.env.DATABASE;
+mongoose.connect(DB,{
     useCreateIndex : true,
     useFindAndModify : false, // if update not working then change false to true or vice versa
     useNewUrlParser : true,
     useUnifiedTopology : true
 })
+
+// This is for local database
+// const url = 'mongodb://localhost:27017/FoodBazar';
+// mongoose.connect(url,{
+//     useCreateIndex : true,
+//     useFindAndModify : false, // if update not working then change false to true or vice versa
+//     useNewUrlParser : true,
+//     useUnifiedTopology : true
+// })
 const connection = mongoose.connection;
 connection.once('open',() =>{
     console.log('Database connected...');
@@ -30,7 +39,8 @@ connection.once('open',() =>{
 
 //session store
 const mongoStore = MongoDbStore.create({
-    mongoUrl: url,
+    // mongoUrl: url,
+    mongoUrl: DB,
     collectionName: "sessions",
   });
 //event emitter
@@ -60,7 +70,7 @@ app.use(express.json());
 //Global middleware
 app.use((req,res,next) =>{
     res.locals.session = req.session
-    res.locals.user = req.user
+     res.locals.user = req.user
     next()
 })
 //Set template engine
