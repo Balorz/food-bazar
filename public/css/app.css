@@ -83,7 +83,6 @@ body {
 }
 
 .order-container {
-  height: 70vh;
   max-width: 384vh;
   padding: 57px 125px;
   background-color: white;
@@ -362,7 +361,6 @@ section.status {
 #footer {
   background-color: #3f3c3c;
   width: 100%;
-  margin-top: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
